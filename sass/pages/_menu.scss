@@ -1,0 +1,63 @@
+.title-menu {
+    font-family: "Shrikhand";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.menu {
+    position: relative;
+    top: -60px;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    border-radius: 20px 20px 0 0;
+
+    h3 {
+        padding-top: 40px;
+        padding-left: 13px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+.border-bottom:hover {
+    border-bottom: 3px solid $font-vert;
+}
+
+.menu-heart {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 32px 17px 42px 17px;
+}
+
+.dish {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 13px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    h4 {
+        padding-bottom: 5px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    .purple-button {
+        width: 210px;
+    }
+}

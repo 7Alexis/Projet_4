@@ -1,0 +1,238 @@
+// Section Explorer
+
+.explorer {
+    padding: 50px 0 50px 0;
+    background-color: #f6f6f6;
+    text-align: center;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 0 58px 0 42px;
+    }
+
+    p {
+        font-size: 18px;
+        padding: 15px 34px 27px 26px;
+        font-weight: 300;
+    }
+}
+
+.purple-button {
+    @extend %button-linear;
+    padding: 16px 19px;
+    position: relative;
+    overflow: hidden;
+}
+
+.purple-button:hover::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.3);
+    animation: shine 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+// Fonctionnement
+
+.fonctionnement {
+    padding: 0 0 50px 0;
+    margin: 0 30px 0 30px;
+    background-color: #fff;
+
+    h1 {
+        padding: 48px 0 30px 20px;
+        font-weight: 700;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+li {
+    position: relative;
+}
+
+.number {
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 20px;
+    color: $txt-clair;
+    background-color: $font-violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 23px;
+    left: -10px;
+}
+
+.btn-fonction {
+    border-radius: 28px;
+    width: 100%;
+    height: 72px;
+    font-size: 16px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding-right: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.grey {
+    color: #7e7e7e;
+}
+
+.grey:hover {
+    color: $font-violet;
+}
+
+// Restaurants
+
+.restaurants {
+    background-color: #f6f6f6;
+
+    h1 {
+        display: flex;
+        padding: 50px 0 20px 30px;
+    }
+}
+
+.restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 15px 65px 15px;
+    gap: 15px;
+
+    img {
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 120px;
+    }
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.new {
+    color: $txt-vert;
+    background-color: $font-vert;
+    font-family: "inter";
+    font-size: 14px;
+    font-weight: 500;
+    width: 80px;
+    height: 25px;
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0 10px 10px;
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        padding-top: 5px;
+        font-size: 17px;
+    }
+}
+
+.heart__icon {
+    padding-right: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-right: 22px;
+    cursor: pointer;
+
+    &--off {
+        position: absolute;
+        color: black;
+    }
+    &--on {
+        position: absolute;
+        opacity: 0;
+        background: $gradient-violet;
+        background-clip: initial;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+    }
+    &:active &--on {
+        opacity: 1;
+    }
+    &:visited &--off {
+        opacity: 0;
+    }
+}
+
+// Media Queries
+
+@media (min-width: 1024px) {
+    .fonctionnement {
+        ul {
+            flex-direction: row;
+            justify-content: center;
+            gap: 38px;
+        }
+    }
+
+    .btn-fonction {
+        width: 300px;
+    }
+
+    .restaurants-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+
+        img {
+            width: 450px;
+            height: 200px;
+        }
+    }
+}
