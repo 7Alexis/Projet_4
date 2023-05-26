@@ -7,7 +7,7 @@
 
 .menu {
     position: relative;
-    top: -60px;
+    top: -52px;
     box-sizing: border-box;
     background-color: #f6f6f6;
     border-radius: 20px 20px 0 0;
@@ -26,7 +26,7 @@
 
 .menu-heart {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     justify-content: center;
     padding: 32px 17px 42px 17px;
 }
@@ -39,7 +39,8 @@
     padding: 10px;
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
 
     h4 {
         padding-bottom: 5px;
@@ -53,11 +54,68 @@
     }
 }
 
+.txt-dish {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dish:active p {
+    width: calc(100% - 50px);
+}
+
+.price-check {
+    position: absolute;
+    right: -60px;
+    top: 0px;
+    display: flex;
+    height: 100%;
+    transition: right 0.3s ease-in;
+}
+
+.dish:active .price-check {
+    right: 0%;
+}
+
+.price {
+    position: relative;
+    bottom: -59%;
+    margin-right: 16px;
+}
+
+.check-icon {
+    background: $font-vert;
+    color: $txt-clair;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60px;
+    border-radius: 0 20px 20px 0;
+}
+
+.fa-check {
+    color: #99e2d0;
+    border-radius: 30px;
+    background-color: #eee;
+    padding: 3px;
+}
+
 .center {
     display: flex;
     justify-content: center;
     padding-top: 40px;
+
     .purple-button {
         width: 210px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu {
+        padding: 0 12% 0 12%;
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
     }
 }
