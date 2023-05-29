@@ -31,6 +31,11 @@
     padding: 32px 17px 42px 17px;
 }
 
+.fade-in {
+    opacity: 0;
+    animation: fade-in-animation 3s ease-in-out forwards;
+}
+
 .dish {
     background-color: #fff;
     border-radius: 20px;
@@ -41,26 +46,32 @@
     align-items: flex-end;
     position: relative;
     overflow: hidden;
-
-    h4 {
-        padding-bottom: 5px;
-        font-size: 18px;
-        font-weight: 500;
-    }
-
-    p {
-        font-size: 15px;
-        font-weight: 300;
-    }
 }
 
 .txt-dish {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-}
-.dish:active p {
     width: calc(100% - 50px);
+
+    h4 {
+        padding-bottom: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+.dish:active p,
+.dish:active h4 {
+    width: calc(100% - 60px);
 }
 
 .price-check {
